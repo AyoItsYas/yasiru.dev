@@ -1,0 +1,17 @@
+:root {
+  --background: #ffffff;
+  --foreground: #212121;
+}
+
+body {
+  color: var(--foreground);
+  background-color: var(--background);
+}
+
+// user theme media query
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #212121;
+    --foreground: #ffffff;
+  }
+}

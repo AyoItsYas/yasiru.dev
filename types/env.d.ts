@@ -7,4 +7,8 @@ declare global {
       SUPABASE_KEY: string;
     }
   }
+  interface ComponentProps {
+    _id?: string;
+    children?: React.ReactNode;
+  }
 }

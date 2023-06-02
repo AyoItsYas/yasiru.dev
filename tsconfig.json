@@ -21,6 +21,11 @@
     "paths": {
       "@/*": [
         "./*"
+      ],
+      "@components/*": [
+        "./components/*",
+        "./components/_app/*",
+        "./components/index/*"
       ]
     },
     "typeRoots": [
