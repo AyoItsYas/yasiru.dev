@@ -16,11 +16,28 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve",
+    "jsx": "react-jsx",
     "incremental": true,
     "paths": {
       "@/*": [
         "./*"
+      ],
+      "@components/*": [
+        "./components/*",
+        "./components/_app/*",
+        "./components/index/*"
+      ],
+      "@lib/*": [
+        "./lib/*"
+      ],
+      "@pages/*": [
+        "./pages/*"
+      ],
+      "@styles/*": [
+        "./styles/*"
+      ],
+      "@types/*": [
+        "./types/*"
       ]
     },
     "typeRoots": [

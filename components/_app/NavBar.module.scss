@@ -1,0 +1,55 @@
+// .NavBar {}
+
+.NavBarMenu {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.NavBarMenuItem {
+  &:last-child {
+    margin-left: auto;
+
+    a {
+      color: var(--theme-background);
+      background: var(--theme-foreground);
+      &:hover {
+        color: var(--theme-foreground);
+        background: var(--theme-background-accent);
+      }
+    }
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 120px;
+    margin: 0;
+    padding: 5px 30px;
+
+    color: var(--theme-foreground);
+
+    color: inherit;
+    font-weight: 600;
+    font-size: 15px;
+
+    white-space: nowrap;
+    text-decoration: none;
+    background: var(--theme-background-accent);
+    border-radius: 100vw;
+    box-shadow: var(--theme-component-shadow);
+    cursor: pointer;
+
+    transition: 0.3s;
+
+    &:hover {
+      color: var(--theme-background);
+      background: var(--theme-foreground);
+    }
+  }
+}

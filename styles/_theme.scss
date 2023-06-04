@@ -1,0 +1,32 @@
+:root {
+  /* spacing */
+  --app-page-margin-x: 10vw;
+  --app-page-margin-y: 30px;
+  --app-component-border-radius: 5px;
+
+  /* colors */
+  --theme-background: #ffffff;
+  --theme-foreground: #2b2b2b;
+  --theme-background-accent: #dddddd;
+
+  --theme-component-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+
+  /* fonts */
+  --primary-fonts: 'Poppins';
+  --fallback-fonts: 'Roboto', 'sans-serif';
+  --theme-fonts: var(--primary-fonts), var(--fallback-fonts);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --theme-background: #212121;
+    --theme-foreground: #ffffff;
+    --theme-background-accent: #363636;
+  }
+}
+
+body {
+  color: var(--theme-foreground);
+  font-family: var(--theme-fonts);
+  background-color: var(--theme-background);
+}

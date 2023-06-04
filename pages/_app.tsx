@@ -1,6 +1,17 @@
-import "@/styles/_app.scss";
-import type { AppProps } from "next/app";
+import Head from 'next/head';
 
-export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
+import '@styles/_app.scss';
+
+import type { AppProps } from 'next/app';
+
+export default function MyApp({ Component, pageProps }: AppProps) {
+  return (
+    <>
+      <Head>
+        <meta name="viewport" content="viewport-fit=cover" />
+      </Head>
+
+      <Component {...pageProps} />
+    </>
+  );
 }
