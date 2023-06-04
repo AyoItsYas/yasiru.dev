@@ -4,8 +4,8 @@ function Section(props: ComponentProps) {
   const { _id, children } = props;
 
   return (
-    <div id={_id} className={SectionStyles.main}>
-      <div className={SectionStyles.container}>{children}</div>
+    <div id={_id} className={SectionStyles.Section}>
+      <div className={SectionStyles.Container}>{children}</div>
     </div>
   );
 }
@@ -14,7 +14,7 @@ function SectionSpotLight(props: ComponentProps) {
   const { _id, children } = props;
 
   return (
-    <div id={_id} className={SectionStyles.spotLight}>
+    <div id={_id} className={SectionStyles.SpotLight}>
       {children}
     </div>
   );

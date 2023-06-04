@@ -1,0 +1,32 @@
+.ContentBox {
+  display: grid;
+}
+
+.ContentBoxHeading {
+  position: relative;
+  width: 100%;
+  margin: 45px 0;
+  font-weight: 700;
+  font-size: 30px;
+  transition: all 0.5s ease-in-out;
+  &:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 200px;
+    height: 2px;
+    background: var(--theme-foreground);
+    content: '';
+  }
+
+  label {
+    position: absolute;
+    top: -30px;
+    left: -40px;
+    z-index: -1;
+    color: var(--theme-background-accent);
+    font-size: 90px;
+    white-space: nowrap;
+    transition: all 1s ease-in-out;
+  }
+}
