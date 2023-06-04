@@ -4,13 +4,49 @@ import Link from 'next/link';
 import Footer from '@components/Footer';
 import Header from '@components/Header';
 import NavBar from '@components/NavBar';
-
 import Section from '@components/Section';
 
 import ContentBox from '@/components/index/ContentBox';
-import ProfileCard from '@/components/index/ProfileCard';
+import ProfileBox from '@/components/index/ProfileBox';
 
 import type { InferGetStaticPropsType } from 'next';
+
+import {
+  FaAt,
+  FaDiscord,
+  FaGithubAlt,
+  FaInstagram,
+  FaLinkedinIn,
+} from 'react-icons/fa';
+
+// import {
+//   SiPython,
+//   SiJavascript,
+//   SiTypescript,
+//   SiCss3,
+//   SiHtml5,
+//   SiMongodb,
+//   SiMysql,
+//   SiPostgresql,
+//   SiVisualstudiocode,
+//   SiUbuntu,
+//   SiGit,
+//   SiGithub,
+//   SiBitbucket,
+//   SiJirasoftware,
+//   SiPowershell,
+//   SiGnubash,
+//   SiSass,
+//   SiDocker,
+//   SiBootstrap,
+//   SiSlack,
+//   SiDiscord,
+//   SiDjango,
+//   SiNodedotjs,
+//   SiReact,
+//   SiNextdotjs,
+//   SiVim,
+// } from "react-icons/si";
 
 function getStaticProps() {
   interface NavBarItem {
@@ -27,11 +63,21 @@ function getStaticProps() {
   ];
 
   interface UserData {
+    Email: string;
     GitHubUserName: string;
+    LinkedInName: string;
+    LinkedInUserName: string;
+    DiscordUserID: string;
+    DiscordUserName: string;
   }
 
   const UserData: UserData = {
+    Email: 'yasiru.dharmathilaka@gmail.com',
     GitHubUserName: 'AyoItsYas',
+    LinkedInName: 'Yasiru Dharmathilaka',
+    LinkedInUserName: 'yasiru-dharmathilaka',
+    DiscordUserID: '837258955415748639',
+    DiscordUserName: 'Yas_!_ru#9999',
   };
 
   return { props: { NavBarItems, UserData } };
@@ -46,7 +92,7 @@ function IndexPage(props: InferGetStaticPropsType<typeof getStaticProps>) {
         <title>Yasiru Dharmathilaka - Portfolio</title>
       </Head>
 
-      <Section>
+      <Section _id="about">
         <Header>
           <NavBar>
             <NavBar.Menu>
@@ -60,42 +106,70 @@ function IndexPage(props: InferGetStaticPropsType<typeof getStaticProps>) {
         </Header>
 
         <Section.SpotLight>
-          <ProfileCard>
-            <ProfileCard.Image
-              width={200}
-              height={200}
-              profileImageSrc={`https://www.github.com/${UserData.GitHubUserName}.png`}
+          <ProfileBox _style={{ flexBasis: '30%' }}>
+            <ProfileBox.Image
+              src={`https://www.github.com/${UserData.GitHubUserName}.png`}
             />
-          </ProfileCard>
 
-          <ContentBox>
+            <ProfileBox.LinkMenu>
+              <ProfileBox.LinkMenu.Item
+                href={`mailto:${UserData.Email}`}
+                icon={<FaAt />}
+                text="Email"
+                value={UserData.Email.split('@')[0]}
+              />
+
+              <ProfileBox.LinkMenu.Item
+                href={`https://www.github.com/${UserData.GitHubUserName}`}
+                icon={<FaGithubAlt />}
+                text="GitHub"
+                value={UserData.GitHubUserName}
+              />
+
+              <ProfileBox.LinkMenu.Item
+                href={`https://www.linkedin.com/in/${UserData.LinkedInUserName}`}
+                icon={<FaLinkedinIn />}
+                background="#0072b1"
+                text="LinkedIn"
+                value={UserData.LinkedInName}
+              />
+
+              <ProfileBox.LinkMenu.Item
+                href={`https://www.discord.com/users/${UserData.DiscordUserID}`}
+                icon={<FaDiscord />}
+                background="linear-gradient(to right, rgb(154, 162, 253), rgb(88, 101, 242))"
+                text="Discord"
+                value={UserData.DiscordUserName}
+              />
+
+              <ProfileBox.LinkMenu.Item
+                href=""
+                icon={<FaInstagram />}
+                background="linear-gradient(to right, rgb(250, 140, 81), rgb(214, 36, 159))"
+                text="Instagram"
+                value="ayo.its.yas"
+              />
+            </ProfileBox.LinkMenu>
+          </ProfileBox>
+
+          <ContentBox _style={{ flexBasis: '55%' }}>
             <ContentBox.Heading>About Me</ContentBox.Heading>
             <ContentBox.Paragraph>
-              Hello my name's Yasiru, people call me Yas. I'm from Colombo, Sri
-              Lanka. I'm 18 years old and I am currently a student at Trinity
-              College Kandy. I enjoy programming and almost anything related to
-              computers. How computers function really amazed me and here I am
-              digging deeper into the field and building my career doing what I
-              love.
+              Hello! I am Yasiru people call me Yas. I am currently a student at
+              National School of Business Management (NSBM) Green University and
+              a self taught full-stack developer based on Colombo, Sri Lanka.
               <br />
               <br />
-              Taking apart things and breaking them, making something different,
-              &amp; fiddling around with circuits, this was my thing. I got my
-              hands on my dad's laptop and I ruined it trying to do things I
-              didn't know. I got my own computer in grade 9 where I wrote my
-              first ever "program", it was a windows batch file game that worked
-              on the terminal. I was in boarding school so I didn't have much
-              time to do things with my computer, the only time I get to use my
-              computer was on weekends when I got home.
+              I am a very passionate individual when it comes to programming and
+              anything general about computers. From a young age I have been
+              captivated by the functionality of computers and electronics,
+              which fueled my determination to pursue a career in the field of
+              computer science.
               <br />
               <br />
-              When Covid started things changed, lockdown is what really got me
-              going. I met a lot of people online, one of them was a developer
-              that encouraged me to learn JavaScript. I wanted to build a
-              discord bot and that was when I programmed something with an
-              actual programming language. Since then I've been learning and
-              building various things like chatbots, websites, automation
-              programs, &amp; web scrappers.
+              Apart from that I am a very introverted, <s>funny</s>, friendly
+              and easy going character who is always open to new experiences and
+              challenges.
             </ContentBox.Paragraph>
           </ContentBox>
         </Section.SpotLight>
