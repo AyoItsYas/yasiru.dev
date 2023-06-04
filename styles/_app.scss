@@ -1,6 +1,22 @@
 @import '_reset.scss';
 @import '_theme.scss';
 
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--theme-background-accent);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--theme-foreground);
+}
+
 body {
   max-width: 1920px;
   margin-inline: auto;

@@ -2,13 +2,14 @@
   /* spacing */
   --app-page-margin-x: 10vw;
   --app-page-margin-y: 30px;
+  --app-component-border-radius: 5px;
 
   /* colors */
   --theme-background: #ffffff;
-  --theme-background-accent: #303030;
-  --theme-foreground: #212121;
+  --theme-foreground: #2b2b2b;
+  --theme-background-accent: #dddddd;
 
-  --theme-component-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  --theme-component-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 
   /* fonts */
   --primary-fonts: 'Poppins';
@@ -20,6 +21,7 @@
   :root {
     --theme-background: #212121;
     --theme-foreground: #ffffff;
+    --theme-background-accent: #363636;
   }
 }
 
