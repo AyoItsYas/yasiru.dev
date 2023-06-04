@@ -1,2 +1,7 @@
 @import '_reset.scss';
 @import '_theme.scss';
+
+body {
+  max-width: 1920px;
+  margin-inline: auto;
+}
