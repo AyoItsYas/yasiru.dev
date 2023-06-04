@@ -1,0 +1,73 @@
+.ProfileBox {
+  padding: var(--app-page-margin-y);
+  background: var(--theme-background-accent);
+  border-radius: var(--app-component-border-radius);
+  box-shadow: var(--theme-component-shadow);
+
+  .Container {
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--app-page-margin-y) / 1.5);
+  }
+}
+
+.ProfileBoxLinkMenu {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--app-page-margin-y) / 3);
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.ProfileBoxLink {
+  $padding-x: 20px;
+  $icon-size: 20px;
+
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 8px $padding-x;
+
+  text-decoration: none !important;
+  background: var(--theme-background);
+  border-radius: var(--app-component-border-radius);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    .ProfileBoxLinkText {
+      opacity: 0;
+    }
+    .ProfileBoxLinkValue {
+      opacity: 1;
+    }
+  }
+
+  .ProfileBoxLinkIcon {
+    width: $icon-size;
+    font-size: $icon-size;
+    svg {
+      fill: var(--theme-foreground);
+    }
+  }
+
+  .ProfileBoxLinkText,
+  .ProfileBoxLinkValue {
+    position: absolute;
+    left: calc(2 * $padding-x);
+    width: calc(100% - (3 * $padding-x));
+
+    color: var(--theme-foreground);
+    font-weight: 600;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.1s;
+  }
+
+  .ProfileBoxLinkValue {
+    opacity: 0;
+  }
+}

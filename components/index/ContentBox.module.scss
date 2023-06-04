@@ -1,11 +1,19 @@
+$padding-x: 80px;
+$padding-y: 45px;
+
 .ContentBox {
-  display: grid;
+  padding: $padding-y $padding-x;
+  border: 3px dashed var(--theme-background-accent);
+  border-radius: var(--app-component-border-radius);
+  box-shadow: var(--theme-component-shadow);
+  transition: all 0.3s ease-in-out;
 }
 
 .ContentBoxHeading {
   position: relative;
   width: 100%;
-  margin: 45px 0;
+  margin: 0;
+  margin-bottom: $padding-y;
   font-weight: 700;
   font-size: 30px;
   transition: all 0.5s ease-in-out;
@@ -29,4 +37,8 @@
     white-space: nowrap;
     transition: all 1s ease-in-out;
   }
+}
+
+.ContentBoxParagraph {
+  text-align: justify;
 }

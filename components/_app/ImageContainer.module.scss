@@ -1,5 +1,5 @@
 .ImageContainer {
-}
-
-.ImageContainerChild {
+  img {
+    border-radius: var(--app-component-border-radius);
+  }
 }
